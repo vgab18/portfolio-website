@@ -68,7 +68,7 @@ export default function Header(props){
                 <Container maxWidth="lg">
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
-                            VGCL
+                            VG
                         </Typography>
                         <Button color="inherit" className={classes.button}>Services</Button>
                         <Button color="inherit" className={classes.button}>Projects</Button>
