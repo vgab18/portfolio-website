@@ -1,0 +1,14 @@
+.services-card {
+  padding: 10px;
+  text-align: center;
+  background-color: transparent !important;
+}
+
+.services-title-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.services-image {
+  height: 150px;
+}
