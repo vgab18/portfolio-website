@@ -37,7 +37,9 @@ export default function About(){
                                 <GitHubIcon fontSize="medium" />
                             </IconButton >
                         </div>
-                        <Button className="btn-download-cv" variant="contained" color="primary">Download CV</Button>
+                        <div className="download-cv-container">
+                            <Button className="btn-download-cv" variant="contained" color="primary">Download CV</Button>
+                        </div>
                     </Grid>
                     <Hidden xsDown>
                         <Grid md={3} sm={4} item style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

@@ -29,6 +29,19 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
+  function ElevationScroll(props){
+    const { children, window } = props;
+    const trigger = useScrollTrigger({
+      disableHysteresis: true,
+      threshold: 0,
+      target: window ? window() : undefined,
+    });
+  
+    return React.cloneElement(children, {
+      elevation: trigger ? 4 : 0,
+    });
+  }
+
   function ScrollTop(props) {
     const { children, window } = props;
     const classes = useStyles();
@@ -64,7 +77,8 @@ export default function Header(props){
 
     return(
         <div>
-            <AppBar elevation={0} color="default">
+          <ElevationScroll {...props}>
+            <AppBar elevation={0} color="default" style={{backgroundColor: '#363645', color: 'white'}}>
                 <Container maxWidth="lg">
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
@@ -77,12 +91,13 @@ export default function Header(props){
                     </Toolbar>
                 </Container>
             </AppBar>
-            <Toolbar id="back-to-top-anchor" />
-            <ScrollTop {...props}>
-                <Fab color="primary" size="small" aria-label="scroll back to top">
-                    <KeyboardArrowUpIcon />
-                </Fab>
-            </ScrollTop>
+          </ElevationScroll>
+          <Toolbar id="back-to-top-anchor" />
+          <ScrollTop {...props}>
+              <Fab color="primary" size="small" aria-label="scroll back to top">
+                  <KeyboardArrowUpIcon />
+              </Fab>
+          </ScrollTop>
         </div>
     )
 }
