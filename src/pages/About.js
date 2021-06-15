@@ -18,28 +18,30 @@ export default function About(){
             <Container maxWidth="md">
                 <Grid container>
                     <Grid md={9} sm={8} xs={12} item>
-                        <Typography gutterBottom variant="h4">Hello,</Typography>
-                        <Typography className="txt-name" gutterBottom variant="h3">I'm Vince Gabriel Lagarto</Typography>
-                        <Typography variant="h4">Front-End Web Developer</Typography>
+                        <div>
+                            <Typography gutterBottom variant="h4">Hello,</Typography>
+                            <Typography className="txt-name" gutterBottom variant="h3">I'm Vince Gabriel Lagarto</Typography>
+                            <Typography variant="h5" className="txt-position">{"<"}Front-End Web Developer{"/>"}</Typography>
+                        </div>
                         <div className="socials-container">
                             <IconButton className="btn-socials">
-                                <TwitterIcon fontSize="small" />
+                                <TwitterIcon fontSize="medium" />
                             </IconButton>
                             <IconButton className="btn-socials">
-                                <FacebookIcon fontSize="small" />
+                                <FacebookIcon fontSize="medium" />
                             </IconButton>
                             <IconButton className="btn-socials">
-                                <InstagramIcon fontSize="small" />
+                                <InstagramIcon fontSize="medium" />
                             </IconButton >
                             <IconButton className="btn-socials">
-                                <GitHubIcon fontSize="small" />
+                                <GitHubIcon fontSize="medium" />
                             </IconButton >
                         </div>
                         <Button className="btn-download-cv" variant="contained" color="primary">Donwload CV</Button>
                     </Grid>
                     <Hidden xsDown>
                         <Grid md={3} sm={4} item style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                            <div>
+                            <div className="avatar-container">
                                 <img src={AvatarIcon} height="180"/>
                             </div>
                         </Grid>

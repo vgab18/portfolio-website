@@ -19,7 +19,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
-  padding: 130px 0px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  border-radius: 0% 0% 5% 5%;
 }
 
 .btn-download-cv {
@@ -30,15 +32,20 @@
   margin-top: 30px;
 }
 
-.txt-name {
-  /* font-family: Verdana; */
-}
-
 .btn-socials {
-  color: #455a64 !important;
+  color: #2979ff !important;
 }
 
 .btn-socials:hover {
   color: white !important;
-  background-color: #455a64 !important;
+  background-color: #2979ff !important;
 }
+
+.txt-name {
+  color: #263238;
+  font-weight: bold !important;
+}
+
+/* .txt-position {
+  color: #00e676;
+} */
