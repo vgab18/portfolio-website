@@ -12,3 +12,33 @@
 .services-image {
   height: 150px;
 }
+
+.about-container {
+  background-color: #cfd8dc;
+  /* background-image: url("./images/bg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  padding: 130px 0px;
+}
+
+.btn-download-cv {
+  margin-top: 30px !important;
+}
+
+.socials-container {
+  margin-top: 30px;
+}
+
+.txt-name {
+  /* font-family: Verdana; */
+}
+
+.btn-socials {
+  color: #455a64 !important;
+}
+
+.btn-socials:hover {
+  color: white !important;
+  background-color: #455a64 !important;
+}

@@ -10,7 +10,7 @@ import Service1 from '../styles/images/service1.png'
 export default function Services(){
     return(
         <div style={{padding: '50px 0px'}}>
-            <Container maxWidth="lg">
+            <Container maxWidth="md">
                 <div className="services-title-header">
                     <Typography>What do I do</Typography>
                 </div>

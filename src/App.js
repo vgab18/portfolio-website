@@ -10,10 +10,10 @@ import Services from './pages/Services'
 const darkTheme = createMuiTheme({
   palette: {
     type: 'light',
+    primary:{
+      main: '#2979ff'
+    }
   },
-  primary:{
-    main: '#3f51b5'
-  }
 });
 
 function App() {

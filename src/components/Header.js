@@ -64,7 +64,7 @@ export default function Header(props){
 
     return(
         <div>
-            <AppBar>
+            <AppBar elevation={0} color="default">
                 <Container maxWidth="lg">
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
