@@ -18,7 +18,7 @@ export default function About(){
             <Container maxWidth="md">
                 <Grid container>
                     <Grid md={9} sm={8} xs={12} item>
-                        <div>
+                        <div className="about-txt-container">
                             <Typography gutterBottom variant="h4">Hello,</Typography>
                             <Typography className="txt-name" gutterBottom variant="h3">I'm Vince Gabriel Lagarto</Typography>
                             <Typography variant="h5" className="txt-position">{"<"}Front-End Web Developer{"/>"}</Typography>
@@ -37,12 +37,12 @@ export default function About(){
                                 <GitHubIcon fontSize="medium" />
                             </IconButton >
                         </div>
-                        <Button className="btn-download-cv" variant="contained" color="primary">Donwload CV</Button>
+                        <Button className="btn-download-cv" variant="contained" color="primary">Download CV</Button>
                     </Grid>
                     <Hidden xsDown>
                         <Grid md={3} sm={4} item style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                             <div className="avatar-container">
-                                <img src={AvatarIcon} height="180"/>
+                                <img src={AvatarIcon} height="220"/>
                             </div>
                         </Grid>
                     </Hidden>

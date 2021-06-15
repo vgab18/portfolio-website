@@ -14,7 +14,7 @@
 }
 
 .about-container {
-  background-color: #cfd8dc;
+  background-color: #363645;
   /* background-image: url("./images/bg1.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -26,6 +26,7 @@
 
 .btn-download-cv {
   margin-top: 30px !important;
+  color: white !important;
 }
 
 .socials-container {
@@ -33,17 +34,20 @@
 }
 
 .btn-socials {
-  color: #2979ff !important;
+  color: #42a5f5 !important;
 }
 
 .btn-socials:hover {
   color: white !important;
-  background-color: #2979ff !important;
+  background-color: #42a5f5 !important;
 }
 
 .txt-name {
-  color: #263238;
   font-weight: bold !important;
+}
+
+.about-txt-container {
+  color: white;
 }
 
 /* .txt-position {
