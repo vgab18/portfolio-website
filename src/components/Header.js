@@ -1,16 +1,16 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-scroll';
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import MenuIcon from '@material-ui/icons/Menu'
 import Container from '@material-ui/core/Container'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import Zoom from '@material-ui/core/Zoom';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Fab from '@material-ui/core/Fab';
+import Hidden from '@material-ui/core/Hidden'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
       flexGrow: 1,
+      fontFamily: 'Lobster !important'
     },
     button: {
         textTransform: 'none'
@@ -78,23 +79,32 @@ export default function Header(props){
     return(
         <div>
           <ElevationScroll {...props}>
-            <AppBar elevation={0} color="default" style={{backgroundColor: '#363645', color: 'white'}}>
+            <AppBar elevation={0} style={{backgroundColor: 'white', color: '#363645'}}>
                 <Container maxWidth="lg">
                     <Toolbar>
                         <Typography variant="h6" className={classes.title}>
-                            VG
+                            Vince
                         </Typography>
-                        <Button color="inherit" className={classes.button}>Services</Button>
-                        <Button color="inherit" className={classes.button}>Projects</Button>
-                        <Button color="inherit" className={classes.button}>Career</Button>
-                        <Button color="inherit" className={classes.button}>About</Button>
+                        <Hidden xsDown>
+                          <div>
+                            <Link activeClass="active" offset={-120} to="services" spy={true} smooth={true} duration={500}>
+                              <Button color="inherit" className={classes.button}>Services</Button>
+                            </Link>
+                            <Button color="inherit" className={classes.button}>Projects</Button>
+                            <Button color="inherit" className={classes.button}>Career</Button>
+                            <Button color="inherit" className={classes.button}>About</Button>
+                          </div>
+                        </Hidden>
+                        <Hidden smUp>
+                          Hello
+                        </Hidden>
                     </Toolbar>
                 </Container>
             </AppBar>
           </ElevationScroll>
           <Toolbar id="back-to-top-anchor" />
           <ScrollTop {...props}>
-              <Fab color="primary" size="small" aria-label="scroll back to top">
+              <Fab style={{backgroundColor: '#08BDBA', color: 'white'}} size="small" aria-label="scroll back to top">
                   <KeyboardArrowUpIcon />
               </Fab>
           </ScrollTop>

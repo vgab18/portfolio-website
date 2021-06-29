@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
+import './App.scss'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Header from './components/Header'
-import About from './pages/About'
+import Home from './pages/Home'
 import Services from './pages/Services'
 // import { lightGreen } from '@material-ui/core/colors';
 // import { green } from '@material-ui/core/colors';
@@ -17,11 +18,12 @@ const darkTheme = createMuiTheme({
 });
 
 function App() {
+  const [darkMode,setDarkMode] = useState()
+
   return (
       <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
         <Header />
-        <About />
+        <Home />
         <Services />
       </ThemeProvider>
   );
